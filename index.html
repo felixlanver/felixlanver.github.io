@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>World Press Freedom Index Data Story (2020–2025)</title>
+  <style>
+    html, body {
+      background-color: #f3f2ea;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    section {
+      background-color: #f3f2ea;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      background-color: #f3f2ea;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1 style="font-size: 36px;">World Press Freedom Index: A Visual Data Story</h1>
+  <p style="text-align:center; font-size: 14px;">
+    Created by <strong>Felix Lanver</strong> using the latest data from the Reporters Without Borders (RSF) World Press Freedom Index.<br>
+    This visual story is part of an ongoing experiment in how to communicate global political and media developments through interactive data. 
+    I’m exploring different types and styles of data storytelling, focusing on clarity, design, and substance. I’d love to hear your thoughts or suggestions.<br>
+    The visualizations are based on RSF data from <strong>2020 to 2025</strong>.
+    <br><br>
+    Connect with me on <a href="https://bsky.app/profile/felixlanver.bsky.social" target="_blank">@felixlanver.bsky.social</a>
+  </p>
+</section>
+
+<section>
+  <h2>Global Press Freedom Map</h2>
+  <p>This interactive world map illustrates press freedom scores for all countries between 2020 and 2025. The colors reflect the level of press freedom, ranging from dark green (strong) to dark red (very restricted). Use the timeline below the map to explore changes over time. Hovering over a country displays its name, score, and rank for the selected year.</p>
+  <iframe src="01_map.html" style="height: 800px;"></iframe>
+</section>
+
+<section>
+  <h2>Animated Bar Chart: Regional Press Freedom Scores</h2>
+  <p>This animated bar chart displays the development of press freedom scores for countries across different world regions from 2020 to 2025. Users can explore how national scores evolved over time and compare trends across regions. The dropdown menu in the top left allows for switching between regions, while the button in the top right controls the animation.</p>
+  <iframe src="02_bar_animation.html"></iframe>
+</section>
+
+<section>
+  <h2>Line Chart: Regional Trends in Press Freedom</h2>
+  <p>This line chart illustrates the average press freedom scores for global regions from 2020 to 2025. It helps identify broad patterns and differences across regions over time.</p>
+  <iframe src="03_region_lines.html"></iframe>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Score vs. Rank: Interpreting Press Freedom Changes</h2>
+  <p>The charts below present the countries with the largest changes in press freedom between 2020 and 2025. The left chart displays absolute changes in score, offering a direct measure of press freedom conditions within each country. The right chart shows changes in global rank, reflecting how a country’s position has shifted relative to others.</p>
+  <p>While rank movements often draw public attention, they should be interpreted with caution. A country can rise in rank even if its press freedom has deteriorated—provided that other countries declined even more sharply. For this reason, changes in score offer a more reliable and substantive assessment of press freedom.</p>
+  <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+    <div style="flex: 1 1 480px;">
+      <h3 style="text-align:center;">Score Changes</h3>
+      <iframe src="06_score_winners_losers.html"></iframe>
+    </div>
+    <div style="flex: 1 1 480px;">
+      <h3 style="text-align:center;">Rank Changes</h3>
+      <iframe src="07_rank_winners_losers.html"></iframe>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
