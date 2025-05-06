@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Data Posts</title>
+  <style>
+    body {
+      background-color: #f3f2ea;
+      font-family: sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+    .site-header {
+      background-color: #2f855a;
+      padding: 2rem 0;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: none;
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .header-text p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+      color: #fff;
+      border-bottom: 2px solid #2f855a;
+
+    }
+    .intro-wrap {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid #2f855a;
+    }
+
+    .intro {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+      line-height: 1.6;
+      text-align: center;
+
+    }
+    .post {
+      margin: 3rem 0;
+      padding: 3rem 0;
+      border-bottom: 2px solid #2f855a;
+    }
+    .post-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      margin-bottom: 1.4rem;  /* was 0.5rem — now gives more space */
+      text-align: center;
+    }
+    .desc {
+      text-align: left;
+      font-size: 0.95rem;
+      font-weight: normal;
+      color: #555;
+      max-width: 750px;
+      margin: 0.5rem auto 1.25rem auto;
+      line-height: 1.5;
+    }
+    img {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 0.5rem;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .bsky-icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <img src="felix.jpg" alt="Profile photo of Felix Lanver" class="profile-pic">
+      <div class="header-text">
+        <h1>Felix Lanver</h1>
+        <p>Political Scientist & Data Analyst</p>
+        <p class="social-link">
+          <img src="bsky_logo.svg" alt="Bluesky logo" class="bsky-icon">
+          <a href="https://bsky.app/profile/felixlanver.bsky.social" target="_blank">@felixlanver.bsky.social</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <h1>My Data Posts</h1>
+
+<div class="intro-wrap">
+  <p class="intro">
+    Welcome to my website! I'm a political scientist and doctoral researcher working at the intersection of data and public policy.
+    Most of my research focuses on quantitative analysis, looking at welfare states and labor markets.
+    Over time, I’ve realized that the way we present data matters just as much as the data itself.<br><br>
+
+    This page collects my ongoing experiments in data visualization: from scatterplots to pie charts, between font size and color choices, static to interactive.
+    While I usually work in R, all the charts here are made in Python as part of my effort to deepen my skills and explore new workflows.
+    It’s as much a design project as it is a learning journey.<br><br>
+
+    Some posts are explanatory, others more playful or reflective.
+    I'm still figuring out what style fits best, and I genuinely welcome your feedback.
+    I hope to transition into professional data visualization and analysis after my PhD, so this also serves as a living portfolio.
+  </p>
+  </div>
+
+  <div class="post">
+    <p class="post-title">World Press Freedom: Interactive Map</p>
+    <div class="desc">
+      🌍 How free is the press around the world?<br>
+      This animated map shows country-level Press Freedom Index scores from 2020 to 2025.<br>
+      Use the slider to explore changes over time.
+    </div>
+
+    <iframe src="01_map.html" width="100%" height="600" style="border: none;"></iframe>
+
+    <div class="desc" style="text-align: center; margin-top: 1.5rem;">
+      👉 Check out the full data story <a href="your-full-story-link.html" target="_blank">here</a>.
+    </div>
+  </div>
+
+
+  <div class="post">
+    <p class="post-title">City Population</p>
+
+    <div class="desc">
+      What’s the biggest city in the world?<br>
+      This chart compares the population of the top 10 cities by three definitions: City Proper, Urban Area, and Metropolitan Area.
+    </div>
+
+    <img src="city_pop.jpg" alt="City Population">
+
+    <div class="desc">
+      City Proper refers to the population within official administrative boundaries. <br>
+      This can include vast rural areas, especially in large jurisdictions like Chongqing, China, <br>
+      where over 70% of the population may live in non-urban settings.<br>
+      Urban Area focuses on the contiguous built-up environment, disregarding administrative borders. <br>
+      It offers a more consistent picture of physical city size but varies by national criteria.<br>
+      Metropolitan Area includes both the urban core and its surrounding commuter belt, <br>
+      defined by economic and infrastructural ties.<br>
+      It best reflects a city's functional reach but may vary based on statistical definitions and governance models.
+    </div>
+  </div>
+
+
+  <div class="post">
+    <p class="post-title">Papal Conclave: Cardinals per Country</p>
+    <div class="desc">
+      The Papal Conclave starts on May 7.<br>
+      Italy still holds disproportionate influence, but non-European regions are more influential than ever in the College of Cardinals.
+    </div>
+    <img src="pope_cardinals.jpg" alt="Pope Cardinals">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Origins of Popes</p>
+    <div class="desc">
+      🕊 Where did the popes come from?<br>
+      Out of 266 popes in history, over 80% came from Italy.<br>
+      But regions like the Byzantine Empire (Syria), Africa Proconsularis (Tunisia), and the Holy Land (Israel/Palestine) also produced popes — especially in the early centuries.
+    </div>
+    <img src="pope_country_origin.jpg" alt="Pope Origin">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Public Investment</p>
+    <div class="desc">
+      For over a decade, Germany has ranked among the EU’s lowest in public investment.<br>
+      While countries like Estonia or Sweden invested twice as much, Germany held back.<br>
+      Will the new €500 billion infrastructure fund be a turning point for Germany’s infrastructure and green transition?
+    </div>
+    <img src="public_invest.jpg" alt="Public Investment">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Government Debt in the European Union</p>
+    <div class="desc">
+      📉 Government debt in the EU (2024).<br>
+      Southern countries remain the most indebted, while many Eastern and Northern members keep their debt ratios low.
+    </div>
+    <img src="gov_debt_eu.jpg" alt="Government Debt EU">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Minimum Wages in the European Union</p>
+    <div class="desc">
+      This chart shows how minimum wages across EU countries compare to the national median gross earnings.<br>
+      The red line marks the 60% benchmark promoted by the EU Minimum Wage Directive.<br>
+      Only France, Portugal, and Slovenia meet this goal.<br>
+      (Data is from 2022; more recent data coming soon.)
+    </div>
+    <img src="min_wage_eu.jpg" alt="Minimum Wage EU">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Top Export Nations (Top 5)</p>
+    <img src="export_top5.jpg" alt="Top Exporters">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Global EV Battery Production</p>
+    <div class="desc">
+      🔋 Who dominates global EV battery production?<br>
+      China alone accounts for 79% of global manufacturing capacity.<br>
+      Europe, the US, Japan, and Korea trail far behind.
+    </div>
+    <img src="ev_maufacture.jpg" alt="EV Manufacture">
+  </div>
+
+  <div class="post">
+    <p class="post-title">IMF Economic Growth Forecasts</p>
+    <div class="desc">
+      IMF downgrades 2025 growth forecasts sharply for Mexico and the USA.<br>
+      🇲🇽 Mexico: +1.4% → -0.3% (↓ 1.7pp)<br>
+      🇺🇸 USA: +2.7% → 1.8% (↓ 0.9pp)<br>
+      Most major economies are now expected to grow slower than projected just 3 months ago.
+    </div>
+    <img src="imf_forecast.jpg" alt="IMF Forecast">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Central Bank Rates</p>
+    <img src="central_bank_rates.jpg" alt="Central Bank Rates">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Top 10 Military Spenders</p>
+    <div class="desc">
+      Putin's imperial ambitions are visible in the data.<br>
+      Following the illegal annexation of Crimea, Russia accelerated its militarization – in sharp contrast to the US and EU.<br>
+      The surge in spending paved the way for the 2022 full-scale assault on Ukraine.
+    </div>
+    <img src="military_top10_spenders.jpg" alt="Top Military Spenders">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Military Expenditure</p>
+    <div class="desc">
+      The 2025 SIPRI data is out.<br><br>
+      The US, China, and Russia remain the world’s largest military spenders – unchanged from a decade ago.<br><br>
+      Germany’s €100 billion Sondervermögen for its armed forces propelled the country to 4th place in 2024.<br><br>
+      Ukraine’s rise in the ranking speaks for itself.
+    </div>
+    <img src="military_exp_gdp.jpg" alt="Military Expenditure GDP">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Election Polls: Australia</p>
+    <div class="desc">
+      Australia heads to the polls on May 3rd. And similar to Canada, the incumbent party is making a small comeback.<br>
+      Labor made up lost ground and recently took the lead in the two-party preferred polls.
+    </div>
+    <img src="polls_australia.jpg" alt="Polls Australia">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Election Polls: Canada</p>
+    <div class="desc">
+      With only 5 days left until the Canadian Federal Election, the liberals are expected to win.<br>
+      Liberals staged an unexpected comeback as Trump’s hostilities and Trudeau’s exit revived the party.
+    </div>
+    <img src="polls_canada.jpg" alt="Polls Canada">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Election Polls: South Korea</p>
+    <div class="desc">
+      🇰🇷 South Korea will elect a new president on June 3.<br>
+      The snap election follows the impeachment and removal of President Yoon (PPP), after he declared martial law on December 3, 2024.<br>
+      The president is elected in a single-round, first-past-the-post system for a non-renewable 5-year term.
+    </div>
+    <img src="polls_korea.jpg" alt="Polls Korea">
+  </div>
+
+  <div class="post">
+    <p class="post-title">Election Polls: Poland</p>
+    <div class="desc">
+      🇵🇱 Poland votes on 18 May (runoff 1 June).<br>
+      With Andrzej Duda (PiS) term-limited, the race will decide his successor.<br>
+      Polls show a comfortable lead for Trzaskowski (PO), candidate of Donald Tusk’s Civic Platform, the governing party since 2023.
+    </div>
+    <img src="polls_poland.jpg" alt="Polls Poland">
+  </div>
+
+</body>
+</html>
