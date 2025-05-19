@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latin America and the Caribbean in Numbers</title>
+  <style>
+    body {
+      background-color: #f3f2ea;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      color: #e6f6e7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .site-header {
+      background-color: #2f855a;
+      padding: 2rem 2rem;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 2rem;
+      color: #fff;
+      text-align: center;
+    }
+    .header-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      text-align: left;
+    }
+    .header-text p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+      color: #fff;
+      text-align: left;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .bsky-icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      fill: #fff;
+    }
+    section {
+      background-color: #f3f2ea;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      background-color: #f3f2ea;
+      margin-top: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    p, blockquote {
+      text-align: justify;
+      font-size: 16px;
+    }
+    blockquote {
+      font-style: italic;
+      margin: 1em 2em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-content">
+    <img src="felix.jpg" alt="Profile photo of Felix Lanver" class="profile-pic">
+    <div class="header-text">
+      <h1>Felix Lanver</h1>
+      <p>Political Scientist & Data Analyst</p>
+      <p class="social-link">
+        <img src="bsky_logo.svg" alt="Bluesky logo" class="bsky-icon">
+        <a href="https://bsky.app/profile/felixlanver.bsky.social" target="_blank">@felixlanver.bsky.social</a>
+      </p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h1>Latin America and the Caribbean in Numbers</h1>
+  <p>
+    This data story presents a series of interactive visualizations exploring the socio-political and economic developments across Latin America and the Caribbean. Drawing from international datasets, it aims to make complex regional trends more accessible and engaging. From human development and population dynamics to governance and inequality, the visualizations provide a broad yet nuanced view of progress and challenges in the region.
+
+    This data story is part of my ongoing experiments in data visualization. While I usually work in R, all the charts here are made in Python as part of my learning journey. I honestly appreciate your feedback on how to make my visualizations more interesting and understandable, so dont hesitate to reach out to me on bsky!
+  </p>
+</section>
+
+<section>
+  <h2>Human Development Index</h2>
+<p>
+    This interactive visualization illustrates the development of the Human Development Index (HDI) across Latin America and the Caribbean from 1990 to 2022. The HDI is a composite indicator that captures key dimensions of human development: life expectancy, education, and income. It ranges from 0 to 1, with higher values indicating higher levels of development.
+
+    The map reveals a clear upward trend across most countries in the region. Nations like Chile, Uruguay, and Argentina have achieved HDI scores above 0.8, placing them in the category of “very high human development.” In contrast, countries such as Nicaragua or Haiti remain significantly below the regional average.
+
+    A central feature of the visualization is the time slider: it allows users to track each country’s progress over more than three decades. On the right-hand side, a live-updating table ranks all Latin American countries by HDI, providing a clear overview of regional disparities.
+  </p>
+  <iframe src="01_hdi_map.html"></iframe>
+</section>
+
+<section>
+  <h2>Population Development</h2>
+  <p>
+    The chart shows the population of Latin America and the Caribbean from 1950 to 2025 based on historical estimates, and from 2026 to 2100 as a projection by the United Nations and ECLAC. The figures are based on the medium variant of the UN population projections and refer to the mid-year population of all countries and territories in the region.
+
+    The population has grown steadily since 1950, increasing from around 168 million to over 660 million in 2025. According to current projections, the population is expected to peak at approximately 731 million around the year 2055. Thereafter, a gradual decline is anticipated, with the population falling below 615 million by the end of the century. 
+
+    Sooner or later, the continent will face the challenges of population decline, such as a shrinking labor force, slower economic growth and high pension and health care costs. 
+  </p>
+  <div style="line-height: 0; margin: 0; padding: 0;">
+  <iframe src="02_pop_estimate.html"
+    style="display: block; width: 100%; height: 620px; border: none; background-color: #f3f2ea; margin: 0 auto;">
+  </iframe>
+</div>
+
+  <h2>Top 10 Most Populous Countries</h2>
+  <p>
+    This animated bar chart race tracks the evolution of population among the 10 most populous countries in Latin America from 1950 to 2100. It offers a country-level perspective to complement the regional trend. Brazil and Mexico dominate the rankings throughout the century, followed by Colombia, Argentina, and Peru.
+
+    The animation allows viewers to observe demographic shifts in motion. While Brazil continues to lead, other countries like Venezuela and Chile show fluctuating trajectories.
+  </p>
+  <iframe src="03_country_pop_bar_race.html"></iframe>
+</section>
+
+<section>
+  <h2>Democracy</h2>
+  <p>
+    In 1980, 76% of the countries in Latin America and the Caribbean were autocracies. By 2024, this trend had dramatically reversed, with the same proportion now qualifying as democracies. This remarkable political transformation is the product of decades of democratization, constitutional reform, and electoral mobilization. However, the journey has been far from linear.
+
+    Today, five countries qualify as liberal democracies—Barbados, Chile, Costa Rica, Jamaica, and Uruguay—demonstrating consistent respect for rule of law, independent media, and minority rights. Fourteen countries hold regular elections but fall short in judicial independence or press freedom, placing them in the category of electoral democracies.
+
+    Six countries—El Salvador, Venezuela, Haiti, Cuba, Nicaragua, and Guyana—are currently classified as autocracies. These nations face major democratic backsliding, political violence, and authoritarian consolidation. 
+  </p>
+  <iframe src="04_regime_pie.html"></iframe>
+</section>
+
+<section>
+  <h2>Regional Equality Index</h2>
+  <p>
+    This final chart compares the Equality Index across major Latin American countries, with a special focus on LGBTQ+ rights and protections. The Equality Index captures multidimensional aspects such as anti-discrimination laws, recognition of same-sex partnerships, adoption rights, gender identity protections, and access to healthcare.
+
+    The graph shows strong regional differences: South American countries such as Uruguay, Costa Rica, and Chile lead the region with strong legal guarantees and public acceptance. 
+
+    In contrast, Caribbean countries rank among the most unequal countries globally. Cuba is a notable exception, ranking 14th globally and even surpassing relatively safe countries such as Argentina and Brazil.  
+  </p>
+  <iframe src="05_equality_index.html"></iframe>
+</section>
+
+</body>
+</html>
